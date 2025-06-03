@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Widestreet | Catálogo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+
+    <!-- Header -->
+<header>
+    <div class="logo">
+        <img src="" alt="Widestreet" width="120">
+    </div>
+    <nav>
+        <a href="https://wa.me/5581991879212" target="_blank">
+            <img src="https://i.pinimg.com/736x/71/69/31/7169314597edf490c5f417bb93881d84.jpg" alt="Whatsapp" width="35">
+        </a>
+        <a href="https://www.instagram.com/wide.streett/" target="_blank">
+            <img src="https://i.pinimg.com/1200x/2c/da/19/2cda1925dcf4fb8f0644413f49671ffa.jpg" alt="Instagram" width="35">
+        </a>
+    </nav>
+</header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Estilo Urbano, Autenticidade na Widestreet</h1>
+        <p>Confira nosso catálogo de roupas urbanas e streetwear</p>
+    </section>
+
+    <!-- Catálogo -->
+    <section class="catalogo">
+        <h2>Nosso Catálogo</h2>
+        <div class="produtos">
+
+            <!-- Produto 1 -->
+            <div class="card">
+                <img src="img/camisa1.jpg" alt="Camisa">
+                <h3>Camisa Oversized</h3>
+                <a class="btn" href="produto.html?img=img/camisa1.jpg&nome=Camisa%20Oversized">
+                    Ver Detalhes
+                </a>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="card">
+                <img src="img/moletom1.jpg" alt="Moletom">
+                <h3>Moletom Street</h3>
+                <a class="btn" href="produto.html?img=img/moletom1.jpg&nome=Moletom%20Street">
+                    Ver Detalhes
+                </a>
+            </div>
+
+            <!-- Produto 3 -->
+            <div class="card">
+                <img src="img/calca1.jpg" alt="Calça">
+                <h3>Calça Cargo</h3>
+                <a class="btn" href="produto.html?img=img/calca1.jpg&nome=Calça%20Cargo">
+                    Ver Detalhes
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Widestreet. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

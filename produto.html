@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto | Widestreet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="" alt="Widestreet">
+        </div>
+        <nav>
+            <a href="https://wa.me/5581991879212" target="_blank">
+                <img src="https://i.pinimg.com/736x/71/69/31/7169314597edf490c5f417bb93881d84.jpg" alt="Whatsapp" class="icon">
+            </a>
+            <a href="https://www.instagram.com/wide.streett/" target="_blank">
+                <img src="https://i.pinimg.com/1200x/2c/da/19/2cda1925dcf4fb8f0644413f49671ffa.jpg" alt="Instagram" class="icon">
+            </a>
+        </nav>
+    </header>
+
+    <section class="produto-detalhe">
+        <div class="container">
+            <img id="foto-produto" src="" alt="Produto">
+            <h1 id="nome-produto"></h1>
+
+            <a id="btn-whatsapp" class="btn" target="_blank">
+                Falar com o Atendente
+            </a>
+        </div>
+    </section>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const img = urlParams.get('img');
+        const nome = urlParams.get('nome');
+
+        document.getElementById('foto-produto').src = img;
+        document.getElementById('nome-produto').innerText = nome;
+        
+        const mensagem = `Estou interessado nesse kit: ${nome}`;
+        const link = `https://wa.me/5581991879212?text=${encodeURIComponent(mensagem)}`;
+        document.getElementById('btn-whatsapp').href = link;
+    </script>
+</body>
+</html>
