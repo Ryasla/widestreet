@@ -20,9 +20,36 @@ header {
     align-items: center;
 }
 
-header .logo img {
-    height: 50px;
+.logo-img {
+    height: auto;
+    max-height: 120px;
+    width: auto;
+    max-width: 140px;
+    animation: floatLogo 2s ease-in-out infinite alternate;
+    background-color: #000; /* <-- fundo preto forçado */
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ff7a00;
 }
+
+
+/* Animação personalizada */
+@keyframes floatLogo {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) rotate(-5deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+/* Efeito hover */
+header .logo img:hover,
+.logo-img:hover {
+    transform: scale(1.05) rotate(1deg);
+}
+
 
 header nav a {
     margin-left: 20px;
